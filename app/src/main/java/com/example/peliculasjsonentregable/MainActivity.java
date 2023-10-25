@@ -3,6 +3,7 @@ package com.example.peliculasjsonentregable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -140,6 +141,24 @@ public class MainActivity extends AppCompatActivity {
         JsonObject jsonObject = parser.parse(peliculas_json).getAsJsonObject();
         JsonArray peliculasArray = jsonObject.getAsJsonArray("peliculas");
         peliculas = gson.fromJson(peliculasArray, Pelicula[].class);
+
+        //Configurar botones
+        ImageButton[] buttons = new ImageButton[11];
+        buttons[0] = findViewById(R.id.p1);
+        buttons[1] = findViewById(R.id.p2);
+        buttons[2] = findViewById(R.id.p3);
+        buttons[3] = findViewById(R.id.p4);
+        buttons[4] = findViewById(R.id.p5);
+        buttons[5] = findViewById(R.id.p6);
+        buttons[6] = findViewById(R.id.p7);
+        buttons[7] = findViewById(R.id.p8);
+        buttons[8] = findViewById(R.id.p9);
+        buttons[9] = findViewById(R.id.p10);
+        buttons[10] = findViewById(R.id.p11);
+
+
+
+
     }
 
 }
