@@ -2,11 +2,14 @@ package com.example.peliculasjsonentregable;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -156,9 +159,18 @@ public class MainActivity extends AppCompatActivity {
         buttons[9] = findViewById(R.id.p10);
         buttons[10] = findViewById(R.id.p11);
 
+        for (int i = 0; i < buttons.length; i++) {
+            final int index = i;
+            ImageButton imageButton = buttons[i];
+            String contentDescription = imageButton.getContentDescription().toString();
 
+            //Cargar la portada con Glide
+            Glide.with(this)
+                    .load(peliculas[index].getPortada())
+                    .into(imageButton);
 
-
+        }
     }
+
 
 }
