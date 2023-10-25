@@ -7,12 +7,144 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/textView"
+        android:layout_width="164dp"
+        android:layout_height="77dp"
+        android:text="Películas:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <ImageButton
+        android:id="@+id/p1"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Película 1"
+        app:layout_constraintBottom_toTopOf="@+id/p4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+
+    <ImageButton
+        android:id="@+id/p2"
+        android:layout_width="101dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Película 2"
+        app:layout_constraintBottom_toTopOf="@+id/p5"
+        app:layout_constraintEnd_toStartOf="@+id/p3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/p1"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p3"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Película 3"
+        app:layout_constraintBottom_toTopOf="@+id/p6"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p4"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Película 4"
+        app:layout_constraintBottom_toTopOf="@+id/p7"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p5"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Película 5"
+        app:layout_constraintBottom_toTopOf="@+id/p8"
+        app:layout_constraintEnd_toStartOf="@+id/p6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/p4"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p6"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Película 6"
+        app:layout_constraintBottom_toTopOf="@+id/p9"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p7"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="52dp"
+        android:contentDescription="Película 7"
+        app:layout_constraintBottom_toTopOf="@+id/p10"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p8"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="216dp"
+        android:contentDescription="Película 8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/p9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/p7"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p9"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="52dp"
+        android:contentDescription="Película 9"
+        app:layout_constraintBottom_toTopOf="@+id/p11"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p10"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="72dp"
+        android:contentDescription="Película 10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/p11"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="72dp"
+        android:contentDescription="Película 11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
