@@ -169,8 +169,19 @@ public class MainActivity extends AppCompatActivity {
                     .load(peliculas[index].getPortada())
                     .into(imageButton);
 
+            imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    abrirDetalle(index);
+                }
+            });
+            imageButton.setContentDescription(peliculas[index].getTitulo());
         }
     }
-
+    private void abrirDetalle(int index) {
+        Intent intent = new Intent(this, DetalleActivity.class);
+        intent.putExtra("pelicula", peliculas[index]);
+        startActivity(intent);
+    }
 
 }
