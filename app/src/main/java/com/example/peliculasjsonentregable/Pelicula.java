@@ -1,8 +1,9 @@
 package com.example.peliculasjsonentregable;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Pelicula {
+public class Pelicula implements Serializable {
     private String titulo;
     private String director;
     private List<String> actores;
