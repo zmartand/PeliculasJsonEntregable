@@ -3,14 +3,16 @@ package com.example.peliculasjsonentregable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+    Gson gson = new Gson();
     private String peliculas_json= "{\n" +
             "  \"peliculas\": [\n" +
             "    {\n" +
@@ -125,4 +127,19 @@ public class MainActivity extends AppCompatActivity {
             "    }\n" +
             "  ]\n" +
             "}";
+
+    private Pelicula[] peliculas;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //Parsear al JSON
+        JsonParser parser = new JsonParser();
+        JsonObject jsonObject = parser.parse(peliculas_json).getAsJsonObject();
+        JsonArray peliculasArray = jsonObject.getAsJsonArray("peliculas");
+        peliculas = gson.fromJson(peliculasArray, Pelicula[].class);
+    }
+
 }
