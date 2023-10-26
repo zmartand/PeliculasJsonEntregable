@@ -1,7 +1,6 @@
 # PeliculasJsonEntregable
 
-## NOTA: 
-Mi repositorio es: https://github.com/zmartand/PeliculasJsonEntregable.git
+## NOTA:  Mi repositorio es: https://github.com/zmartand/PeliculasJsonEntregable.git
 Ejercicio GSON y Glide:
 Películas
 Objetivo:
