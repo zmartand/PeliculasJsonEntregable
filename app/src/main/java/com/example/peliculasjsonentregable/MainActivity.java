@@ -17,6 +17,7 @@ import com.google.gson.JsonParser;
 
 public class MainActivity extends AppCompatActivity {
     Gson gson = new Gson();
+    //JSON con datos de las peliculas
     private String peliculas_json= "{\n" +
             "  \"peliculas\": [\n" +
             "    {\n" +
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             "  ]\n" +
             "}";
 
-    private Pelicula[] peliculas;
+    private Pelicula[] peliculas; //Array para almacenar las peliculas
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         JsonArray peliculasArray = jsonObject.getAsJsonArray("peliculas");
         peliculas = gson.fromJson(peliculasArray, Pelicula[].class);
 
-        //Configurar botones
+        //Configurar botones (ImageButtons) para cada pelicula
         ImageButton[] buttons = new ImageButton[11];
         buttons[0] = findViewById(R.id.p1);
         buttons[1] = findViewById(R.id.p2);
@@ -164,20 +165,23 @@ public class MainActivity extends AppCompatActivity {
             ImageButton imageButton = buttons[i];
             String contentDescription = imageButton.getContentDescription().toString();
 
-            //Cargar la portada con Glide
+            //Cargar la portada de la pelicula usando Glide
             Glide.with(this)
                     .load(peliculas[index].getPortada())
                     .into(imageButton);
 
+            //Configurar el evento onClick para abrir los detalles de la pelicula
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     abrirDetalle(index);
                 }
             });
+            //Establecer la descripcion
             imageButton.setContentDescription(peliculas[index].getTitulo());
         }
     }
+    //Metodo para abrir la actividad de detalles de la pelicula
     private void abrirDetalle(int index) {
         Intent intent = new Intent(this, DetalleActivity.class);
         intent.putExtra("pelicula", peliculas[index]);

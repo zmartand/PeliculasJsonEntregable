@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Pelicula implements Serializable {
+    //Atributos de la clase Pelicula
     private String titulo;
     private String director;
     private List<String> actores;
